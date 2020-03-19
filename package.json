@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/mocha/bin/mocha ./test",
+    "test:watch": "./node_modules/mocha/bin/mocha --watch ./test",
     "start": "node server.js",
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
@@ -26,6 +27,8 @@
     "@babel/core": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "mocha": "^7.1.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2",

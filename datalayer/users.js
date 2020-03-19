@@ -1,15 +1,8 @@
 const { client } = require('./client');
 
-const createUsers = async ({firstName, lastName, address, department, role, password}) => {
+const createUsers = async ({ firstName, lastName, address, department, role, password }) => {
   const sql = `
-  INSERT INTO users(
-    "firstName",
-    "lastName",
-    address,
-    department,
-    role,
-    password
-    )
+  INSERT INTO users("firstName", "lastName", address, department, role, password)
   VALUES ($1, $2, $3, $4, $5, $6)
   RETURNING *;`;
   return (await client.query(sql,

@@ -8,6 +8,6 @@ const {
 
 const userRouter = express.Router();
 
-
+//set up tests, test db layer and tdd api routes
 
 module.exports = { userRouter };
