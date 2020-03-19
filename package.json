@@ -9,7 +9,7 @@
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
     "start:dev": "nodemon server.js --ignore dist/ --ignore src/ & npm run build:dev",
-    "setupdb": "node ./datalayer/dbSetup.js"
+    "setupdb": "node ./datalayer/createDb.js"
   },
   "repository": {
     "type": "git",
